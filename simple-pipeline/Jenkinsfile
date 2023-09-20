@@ -6,6 +6,7 @@ pipeline{
         stage("Build"){
             steps{
                 echo "Building application..."
+                sh "id"
                 sh "date"
                 sh "sleep 1"
             }
@@ -14,6 +15,7 @@ pipeline{
         stage("Test"){
             steps{
                 echo "Testing application..."
+                sh "id"
                 sh "date"
                 sh "sleep 1"
             }
@@ -22,6 +24,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 echo "Building application..."
+                sh "id"
                 sh "date"
                 sh "sleep 1"
             }
