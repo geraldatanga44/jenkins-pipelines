@@ -1,0 +1,30 @@
+pipeline{
+    agent{
+        label "any"
+    }
+    stages{
+        stage("Build"){
+            steps{
+                echo "Building application..."
+                sh "date"
+                sh "sleep 1"
+            }
+        }
+
+        stage("Test"){
+            steps{
+                echo "Testing application..."
+                sh "date"
+                sh "sleep 1"
+            }
+        }
+
+        stage("Deploy"){
+            steps{
+                echo "Building application..."
+                sh "date"
+                sh "sleep 1"
+            }
+        }
+    }
+}
