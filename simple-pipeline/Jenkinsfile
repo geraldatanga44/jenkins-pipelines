@@ -1,4 +1,7 @@
 pipeline{
+    tools {
+        go "1.21.1"
+    }
     agent{
         label "any"
     }
