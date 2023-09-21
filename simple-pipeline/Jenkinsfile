@@ -33,7 +33,7 @@ pipeline{
                 sh '''
                     response=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8081) &&
                     echo response is: $response &&
-                    ["$response" == "200"] && exit 0 || exit 1'''
+                    [$response -eq 200] && exit 0 || exit 1'''
             }
         }
 
