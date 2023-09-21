@@ -1,3 +1,4 @@
+@library("jenkins_shared_library") _
 pipeline{ 
     agent{
         label "any"
@@ -15,9 +16,7 @@ pipeline{
         stage("Build"){
             steps{
                 echo "Building application..."
-                sh "id"
-                sh "date"
-                sh "sleep 1"
+                call()
                 sh "go build simple-pipeline/hello-web.go"
             }
         }
@@ -25,9 +24,7 @@ pipeline{
         stage("Test"){
             steps{
                 echo "Testing application..."
-                sh "id"
-                sh "date"
-                sh "sleep 1"
+                call()
                 sh "go run simple-pipeline/hello-world.go"
                 sh "./hello-web &"
                 sh "chmod +x execute.sh"
@@ -38,9 +35,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 echo "Building application..."
-                sh "id"
-                sh "date"
-                sh "sleep 1"
+                call()
             }
         }
     }
