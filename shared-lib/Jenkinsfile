@@ -1,0 +1,2 @@
+@Library("jenkins_shared_library@main") _
+evenOrOdd(currentBuild.getNumber())
