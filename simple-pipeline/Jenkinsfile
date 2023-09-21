@@ -35,7 +35,11 @@ pipeline{
         stage("Deploy"){
             steps{
                 echo "Building application..."
-                showinfo()
+                script{
+                    info.id()
+                    info.date()
+                    info.sleep(2)
+                }
             }
         }
     }
