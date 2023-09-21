@@ -31,7 +31,7 @@ pipeline{
                 sh "go run simple-pipeline/hello-world.go"
                 sh "./hello-web &"
                 sh '''
-                    response=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080) &&
+                    response=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8081) &&
                     echo response is: $response &&
                     ["$response" == "200"] && exit 0 || exit 1'''
             }
