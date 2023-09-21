@@ -15,6 +15,7 @@ pipeline{
                 sh "id"
                 sh "date"
                 sh "sleep 1"
+                sh "go run simple-pipeline/hello-world.go"
             }
         }
 
