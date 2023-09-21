@@ -16,7 +16,7 @@ pipeline{
         stage("Build"){
             steps{
                 echo "Building application..."
-                call()
+                showinfo()
                 sh "go build simple-pipeline/hello-web.go"
             }
         }
@@ -24,7 +24,7 @@ pipeline{
         stage("Test"){
             steps{
                 echo "Testing application..."
-                call()
+                showinfo()
                 sh "go run simple-pipeline/hello-world.go"
                 sh "./hello-web &"
                 sh "chmod +x execute.sh"
@@ -35,7 +35,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 echo "Building application..."
-                call()
+                showinfo()
             }
         }
     }
